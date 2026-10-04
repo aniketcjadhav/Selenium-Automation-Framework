@@ -13,7 +13,7 @@ public class LoginTest {
 
 	public static void main(String[] args) {
 		
-
+/*
 		WebDriver driver = new ChromeDriver();
 		BrowserUtility browserutility = new BrowserUtility(driver);
 		
@@ -39,6 +39,7 @@ public class LoginTest {
 		System.out.println(list.size());
 		driver.findElement(By.partialLinkText("Sig")).click();
 		
+		*/
 //		driver.close();
 	}
 

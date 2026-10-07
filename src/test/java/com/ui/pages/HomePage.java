@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import com.constants.Browser;
 import static com.constants.Env.*;
 import com.utility.BrowserUtility;
+import com.utility.JSONUtility;
+
 import static com.utility.PropertiesUtil.*; //use static import dirct we can call method without classname.methodname
 
 public final class HomePage extends BrowserUtility {
@@ -14,7 +16,8 @@ public final class HomePage extends BrowserUtility {
 	public HomePage(Browser browserName) {
 		super(browserName);
 		
-		goToWebsite(readProperty(QA, "URL"));
+//		goToWebsite(readProperty(QA, "URL"));  //Properties file reading here QA is file name and URL is property name
+		goToWebsite(JSONUtility.readJSON(QA)); //JSOn file reading to get variable value
 		maximizeWindows();
 		
 	}
